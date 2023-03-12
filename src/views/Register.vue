@@ -22,7 +22,8 @@ const register = () => {
     createUserWithEmailAndPassword(auth, email.value, password.value)
     .then((data) =>{
         return setDoc(doc(usersRef, data.user.uid),{
-            name: fname.value
+            name: fname.value,
+            role: "User"
         });
     }).then(() => {
         router.push('/dashboard')

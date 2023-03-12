@@ -1,6 +1,10 @@
 <template>
+  <Suspense>
+    <div>
   <NavBar/>
   <router-view />
+</div>
+</Suspense>
 </template>
 
 <script>
