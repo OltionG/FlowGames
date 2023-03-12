@@ -1,6 +1,11 @@
 <template>
     <p>Dashboard</p>
     <p><button @click="addUser">Create</button></p>
+    <nav>
+
+<router-link to="/games">Games</router-link>
+
+</nav>
 </template>
 
 <script setup>
