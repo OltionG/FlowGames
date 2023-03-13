@@ -1,9 +1,11 @@
 <script setup>
+import NavBar from '../components/NavBar.vue';
 
 </script>
 
 
 <template>
+  <NavBar/>
 <main>
       <!--Ketu fillon pjesa qe duhet te observohet nga Javascript per ndryshimin e Header-->
       <div class="ob">

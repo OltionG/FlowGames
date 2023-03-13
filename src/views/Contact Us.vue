@@ -1,5 +1,9 @@
-<template>
+<script setup>
+import NavBar from '../components/NavBar.vue';
+</script>
 
+<template>
+<NavBar />
 <main style="background: linear-gradient(-45deg, #23d5ab, #23a6d5, #163391, #e73c7e);
      background-size: 400% 400%;
     animation: gradient 15s ease infinite">

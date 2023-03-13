@@ -46,7 +46,7 @@ const login = () => {
     signInWithEmailAndPassword(getAuth(), email.value, password.value)
     .then((data) =>{
         console.log("Succesfuly signed in!");
-        router.push('/dashboard')
+        router.push('/')
     }).catch((error) => {
         console.log(error.code);
         switch(error.code){

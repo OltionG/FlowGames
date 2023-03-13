@@ -12,15 +12,18 @@
     </ul>
   </nav>
   <nav>
-    <ul class="nav_list">
-      <li class="nav_list-item"><router-link class="nav_link nav_link--btn" to="/register">Register</router-link></li>
-      <li class="nav_list-item"><router-link class="nav_link nav_link--btn nav_link--btn--highlight" to="/login">Login</router-link></li>
-    </ul>
- 
-      <button @click="handleSignOut" v-if="isLoggedIn">Log Out</button>
-      <p v-if="isLoggedIn">{{ userInfo }}</p>
-      <p v-if="isLoggedIn">{{ currentUserName }}</p>
-
+    <div v-if="isLoggedIn">    
+      <ul class="nav_list">
+        <li class="nav_list-item" v-if="!isLoggedin"><p class="nav_link nav_link--btn" v-if="isLoggedIn">{{ currentUserName }}</p></li>
+        <li class="nav_list-item" v-if="!isLoggedin"><button style="width: fit-content;" class="nav_link nav_link--btn nav_link--btn--highlight" @click="handleSignOut" v-if="isLoggedIn">Log Out</button></li>
+      </ul>
+    </div>
+    <div v-else>    
+      <ul class="nav_list">
+        <li class="nav_list-item" v-if="!isLoggedin"><router-link class="nav_link nav_link--btn" to="/register">Register</router-link></li>
+        <li class="nav_list-item" v-if="!isLoggedin"><router-link class="nav_link nav_link--btn nav_link--btn--highlight" to="/login">Login</router-link></li>
+      </ul>
+    </div>     
   </nav>
 </header>
 </template>
@@ -198,7 +201,7 @@ sectionOneObserver.observe(sectionOne);
 
 const handleSignOut = () => {
   signOut(auth).then(() => {
-    router.push("/");
+    location.reload();
   });
 };
 
