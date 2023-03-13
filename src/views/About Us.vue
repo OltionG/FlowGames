@@ -1,99 +1,56 @@
-<script setup>
-
-</script>
-
-
 <template>
-<main>
-      <!--Ketu fillon pjesa qe duhet te observohet nga Javascript per ndryshimin e Header-->
-      <div class="ob">
-      <section class="home-intro">
+    <main style="  background: linear-gradient(-45deg, #e73c7e, #23a6d5, #23d5ab, #ee7752);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;">
+    <div class="ob">
+      <section class="home-intro-abt">
         <img src="@/assets/logo.png" alt="Logo.png">
         <h1>A continuous stream of entertainment</h1>
       </section>
-      </div>
-      <!--Ketu fillon content-->
-      <div style="background-color:whitesmoke; min-height: 15px; opacity: 70%;">
-      </div>
-      <div class ="about" style=" letter-spacing: 1px; line-height: 2;">
-      <div class="home-about"><div class='abt-intro'>
-        <h2>Flow Entertainment</h2>
-        <p>Let the relaxing flow guide you.</p>
-        <br>
-        <hr style="background-color: black; border-width: 0; width: 100%; height: 1px;">
-      </div> 
+    </div>
+    <div style="background-color:whitesmoke; min-height: 15px; opacity: 70%;"></div> 
+      <div class="about" style=" letter-spacing: 1px; line-height: 2;">
+      <div class="home-about-abt">
+        <h2>About us</h2>
         <div class="columns">
-          <div style="border-right:1px solid gray;height:auto">
-            <h3>Who are we?</h3>
             <p>
-              A small indie company, made by the dreams of some ambitious college students.
-            </p>
-          </div>
-          <div style="border-right:1px solid gray;height:auto">
-            <h3>What do we do?</h3>
-            <p>
-              Attemp to bring you video-games that provide you with the entertainment you rightfully deserve.
-            </p>
-          </div>
-          <div>
-            <h3>What's so special about you?</h3>
-            <p>
-              We try to work more with the community, and attempt to create something beautiful together.
+                The people working behind the scenes trying to make something you might enjoy. Learn a bit about their personalities, roles, and the vital importance they all have to the company.
             </p>
         </div>
        </div>
-      </div>
+
+       <div class="img-columns">
+        <div id="whitediv" style="text-align: center; max-width: 300px;  letter-spacing: 1px; line-height: 2; margin-bottom: 5%;">
+          <img src="@/assets/bardhi.jpeg" alt="" style="width: 250px; height: 250px; border-radius: 100%; margin-top: 5%;">
+          <h2 style="margin-top: 5%;">Fatbardh Fetoshi</h2>
+          <h5>Sales and Marketing/PR Management</h5>
+          <hr id="whitehr">
+          The more business oriented of the three, their childhood friend assists them by taking care of marketing, sales and PR management. He has a way 
+          with words and people which makes him a wonderful asset to the team. A joy to be around, you are bound to have a few laughs whenever you get to
+          see and hear him cracking a few jokes.
+        </div>
+        <div id="blackdiv" style="text-align: center; max-width: 300px; letter-spacing: 1px; line-height: 2; margin-bottom: 5%;">
+          <img src="@/assets/Olti.jpg" alt="" style="width: 250px; height: 250px; border-radius: 100%; margin-top: 5%;">
+          <h2 style="margin-top: 5%;">Oltion Gashi</h2>
+          <h5>Founder / CEO / Lead Designer</h5>
+          <hr id="blackhr">
+          Olti started following his career as a programmer at a young age. He has been working on a personal project for
+          about 2 years now and he is excited to see the community reaction. He is the founder of the company and an essential
+        part of it, inspiring everyone around him to do their best, and reminding them to have fun!
+        </div>
+        <div id="whitediv" style="text-align: center; max-width: 300px;  letter-spacing: 1px; line-height: 2; margin-bottom: 5%;">
+          <img src="@/assets/lorik.jpeg" alt="" style="width: 250px; height: 250px; border-radius: 100%; margin-top: 5%;">
+          <h2 style="margin-top: 5%;">Lorik Popaj</h2>
+          <h5>CEO / Assistand Designer</h5>
+          <hr id="whitehr">
+          Lorik has been Olti's parter throughout his entire life. He started getting into programming about 2 years ago,
+          and decided to also pursue his career with his friend. Although he may have only started recently, his determination
+          and quick learning has helped the company plenty, and are looked up to by the entire staff.
+        </div>
+
     </div>
-   <div class="about" style=" letter-spacing: 1px; line-height: 2;"><div class="abt-intro">
-     <h2>Small Company, Big Dream!</h2>
-     <br>
-    <p>We are Flow Entertainment, a small independent video-game developing company, trying to follow a dream. Our passion for creating
-      new things has brought us here: creating new games for you to enjoy. Although we are not too experienced yet, we've been making lots of progress
-      and soon enough we will have something to present to you, to show the fruits of our combined efforts. But what we need the most is not some
-      finished product. No. Instead, what we really need is you yourselves.
-    </p>
-    </div>
-    <div class="home-about"><div class='abt-intro' style="margin-top: -4%;">
-      <h2 style="color: lightblue; font-style: italic; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">All together now!</h2>
-      <br>
-      <hr style="background-color: black; border-width: 0; width: 100%; height: 1px;">
-    </div> 
-  <div class="img-columns">
-    <a href="about.html" style="text-decoration: none;"><div class="icon">
-      <img src="@/assets/joy.png" width="100px" height="100px">
-      <h3>Friendship!</h3>
-      <p>
-        Learn more about us so we can establish a trustful relationship!
-      </p>
-    </div>
-  </a>
-    <a href="community.html"  style="text-decoration: none;"><div class="icon">
-      <img src="@/assets/ideas.png" width="100px" height="100px">
-      <h3>Imagine!</h3>
-      <p>
-        The only boundary is your imagination! Think up ideas with the community!
-      </p>
-    </div>
-  </a>
-    <a href="contacts.html"  style="text-decoration: none;"><div class="icon">
-     <img src="@/assets/share.png" width="100px" height="100px">
-      <h3>Share!</h3>
-      <p>
-        Have something interesting cooked up? Contact us and tell us all about it!
-      </p>
-    </div>
-  </a>
-    <a href="login/create.html"  style="text-decoration: none;"><div class="icon">
-      <img src="@/assets/chat.png" width="100px" height="100px">
-      <h3>Chat!</h3>
-      <p>
-        Join our community and socialize! Talk with other fans around the world!
-      </p>
-    </div>
-  </a>
-  </div>
    </div>
-   </div>
+
       <div class="footer">
         <div class="home-about-foot">
           <div class="columns" style="flex-direction: column;">

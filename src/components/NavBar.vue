@@ -4,7 +4,7 @@
   <nav class="main_nav">  
     <ul class="nav_list">
       <li class="nav_list-item"><router-link class="nav_link" to="/" >Home</router-link></li>
-      <li class="nav_list-item"><router-link class="nav_link" to="/games">About Us</router-link></li>
+      <li class="nav_list-item"><router-link class="nav_link" to="/about">About Us</router-link></li>
       <li class="nav_list-item"><router-link class="nav_link" to="/games">Games</router-link></li>
       <li class="nav_list-item"><router-link class="nav_link" to="/games">Events</router-link></li>
       <li class="nav_list-item"><router-link class="nav_link" to="/games">News</router-link></li>
