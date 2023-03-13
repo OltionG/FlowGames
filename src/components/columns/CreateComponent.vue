@@ -35,7 +35,7 @@
           <div class="form-group">
             <label>Images</label>
             <input
-              type="text"
+              type="img"
               class="form-control"
               v-model="game.image"
               required
@@ -60,7 +60,6 @@
           name: "",
           email: "",
           phone: "",
-          image: "",
         },
       };
     },
@@ -71,12 +70,11 @@
         axios
           .post(apiURL, this.game)
           .then(() => {
-            this.$router.push("/games");
+            this.$router.push("/gameview");
             this.game = {
               name: "",
               email: "",
               phone: "",
-              image: "",
             };
           })
           .catch((error) => {

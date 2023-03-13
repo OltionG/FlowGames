@@ -12,6 +12,9 @@ let gameSchema = new Schema(
     phone: {
       type: Number,
     },
+    image: {
+      type: String,
+    },
   },
   {
     collection: 'games',

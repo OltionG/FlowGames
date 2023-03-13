@@ -1,8 +1,8 @@
 <template>
     <div class="row justify-content-center">
       <div class="col-md-6">
-        <h3 class="text-center">Create game</h3>
-        <form @submit.prevent="handleSubmitForm">
+        <h3 class="text-center">Update game</h3>
+        <form @submit.prevent="handleUpdateForm">
           <div class="form-group">
             <label>Name</label>
             <input
@@ -35,7 +35,7 @@
           <div class="form-group">
             <label>Images</label>
             <input
-              type="text"
+              type="img"
               class="form-control"
               v-model="game.image"
               required
@@ -43,7 +43,7 @@
           </div>
   
           <div class="form-group">
-            <button class="btn btn-danger btn-block">Create</button>
+            <button class="btn btn-danger btn-block">Update</button>
           </div>
         </form>
       </div>
@@ -56,28 +56,25 @@
   export default {
     data() {
       return {
-        game: {
-          name: "",
-          email: "",
-          phone: "",
-          image: "",
-        },
+        game: {},
       };
     },
+    created() {
+      let apiURL = `http://localhost:4000/api/edit-game/${this.$route.params.id}`;
+  
+      axios.get(apiURL).then((res) => {
+        this.game = res.data;
+      });
+    },
     methods: {
-      handleSubmitForm() {
-        let apiURL = "http://localhost:4000/api/create-game";
+      handleUpdateForm() {
+        let apiURL = `http://localhost:4000/api/update-game/${this.$route.params.id}`;
   
         axios
-          .post(apiURL, this.game)
-          .then(() => {
-            this.$router.push("/games");
-            this.game = {
-              name: "",
-              email: "",
-              phone: "",
-              image: "",
-            };
+          .put(apiURL, this.game)
+          .then((res) => {
+            console.log(res);
+            this.$router.push("/view");
           })
           .catch((error) => {
             console.log(error);

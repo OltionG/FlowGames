@@ -1,5 +1,5 @@
 <template>
-  <NavBar />
+    <NavBar></NavBar>
     <div class="ob"></div>
     <div class="container">
 		<div style=" letter-spacing: 1px; line-height: 2;" class="wrap-login">
@@ -61,6 +61,10 @@ import Footer from "../components/Footer.vue";
 import axios from "axios";
   
   export default {
+    components: {
+      NavBar,
+      Footer
+    },
     data() {
       return {
         games: [],
@@ -164,7 +168,6 @@ button:hover {
 }
 
 .wrap-login {
-  margin-top: -15%;
   width: 960px;
   background: #fff;
   border-radius: 10px;

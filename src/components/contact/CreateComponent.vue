@@ -35,7 +35,7 @@
           <div class="form-group">
             <label>Images</label>
             <input
-              type="text"
+              type="img"
               class="form-control"
               v-model="game.image"
               required
@@ -60,7 +60,7 @@
           name: "",
           email: "",
           phone: "",
-          image: "",
+          image: ""
         },
       };
     },
@@ -76,7 +76,7 @@
               name: "",
               email: "",
               phone: "",
-              image: "",
+              image: ""
             };
           })
           .catch((error) => {

@@ -35,7 +35,7 @@
           <div class="form-group">
             <label>Images</label>
             <input
-              type="img"
+              type="text"
               class="form-control"
               v-model="game.image"
               required
@@ -74,7 +74,7 @@
           .put(apiURL, this.game)
           .then((res) => {
             console.log(res);
-            this.$router.push("/view");
+            this.$router.push("/games");
           })
           .catch((error) => {
             console.log(error);
