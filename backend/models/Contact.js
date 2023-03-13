@@ -1,9 +1,12 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-let gameSchema = new Schema(
+let contactSchema = new Schema(
   {
     name: {
+      type: String,
+    },
+    position: {
       type: String,
     },
     description: {
@@ -14,8 +17,8 @@ let gameSchema = new Schema(
     },
   },
   {
-    collection: 'games',
+    collection: 'contact',
   },
 )
 
-module.exports = mongoose.model('Game', gameSchema)
+module.exports = mongoose.model('Contact', contactSchema)

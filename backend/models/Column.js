@@ -1,21 +1,20 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-let gameSchema = new Schema(
+let columnSchema = new Schema(
   {
-    name: {
+    title: {
       type: String,
     },
     description: {
       type: String,
     },
-    image: {
-      type: String,
-    },
+    
+    
   },
   {
-    collection: 'games',
+    collection: 'column',
   },
 )
 
-module.exports = mongoose.model('Game', gameSchema)
+module.exports = mongoose.model('Column', columnSchema)
