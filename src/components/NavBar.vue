@@ -20,8 +20,8 @@
     </div>
     <div v-else>    
       <ul class="nav_list">
-        <li class="nav_list-item" v-if="!isLoggedin"><router-link class="nav_link nav_link--btn" to="/register">Register</router-link></li>
-        <li class="nav_list-item" v-if="!isLoggedin"><router-link class="nav_link nav_link--btn nav_link--btn--highlight" to="/login">Login</router-link></li>
+        <li class="nav_list-item" v-if="!isLoggedin"><a :href="$router.resolve({path: '/register'}).href" class="nav_link nav_link--btn">Register</a></li>
+        <li class="nav_list-item" v-if="!isLoggedin"><a :href="$router.resolve({path: '/login'}).href" class="nav_link nav_link--btn nav_link--btn--highlight">Login</a></li>
       </ul>
     </div>     
   </nav>

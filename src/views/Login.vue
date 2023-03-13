@@ -28,20 +28,28 @@
 					</div>
           <p v-if="errMsg">{{ errMsg }}</p>
 					<div class="container-btn">
-						<button @click="login">Login</button>
+						<button class="btn" @click="login">Login</button>
 					</div>
+          <div class="centered">
+					<div>
+                    <router-link style="font-size: 13px;" to="/register">Sign Up</router-link>
+					</div>
+          </div>
       </div>
 			</div>
 		</div>
 </template>
 
 <script setup>
-import {ref} from "vue";
+import {ref, onMounted} from "vue";
 import { getAuth, signInWithEmailAndPassword} from "firebase/auth";
 import router from "@/router";
 const email = ref("");
 const password = ref("");
 const errMsg = ref()
+onMounted(() => {
+  location.reload;
+})
 const login = () => {
     signInWithEmailAndPassword(getAuth(), email.value, password.value)
     .then((data) =>{

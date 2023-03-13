@@ -2,7 +2,7 @@
     <div class="container">
 			<div class="wrap-login">
 				<div id="logo" class="login-pic">
-					<img src="images/img-01.png" alt="IMG">
+					<img src="@/assets/img-01.png" alt="IMG">
 				</div>
 
 				<div id="form"  class="login-form">
@@ -42,31 +42,18 @@
 							<img src="@/assets/password.png" style="width: 30px; height:30px; opacity:80%; margin-left:-5%;">
 						</span>
 					</div>
-					<div id="not-valid-password" class="not-valid"></div>
-                    <div class="wrap-input">
-						<input id="cpassword" class="input" type="password" name="cpass" placeholder="Confirm Password">
-						<span class="focus-input"></span>
-						<span class="symbol-input">
-							<img src="@/assets/password.png" style="width: 30px; height:30px; opacity:80%; margin-left:-5%;">
-						</span>
-					</div>
-					<div id="not-valid-cpassword" class="not-valid"></div>
-					
+					<div id="not-valid-password" class="not-valid"></div>					
 					<div class="container-btn">
-                        <p><button class="btn" @click="register">Submit</button></p>
+                    <button class="btn" @click="register">Submit</button>
 					</div>
 					<div class="centered">
 					<div>
+                    <router-link style="font-size: 13px;" to="/login">Sign In</router-link>
 					</div>
 				</div>
             </div>
 			</div>
 		</div>
-    <h1>Create an Account</h1>
-    <p><input type="text" placeholder="Email" v-model="email"/></p>
-    <p><input type="password" placeholder="Password" v-model="password"/></p>
-    <p><input type="text" placeholder="Name" v-model="fname"/></p>
-    <p><button @click="register">Submit</button></p>
 </template>
 
 <script setup>
