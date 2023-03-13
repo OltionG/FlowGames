@@ -148,6 +148,32 @@ const querySnapshot = await getDocs(collection(db, "users"));
 
 
 onMounted(() =>{
+  const header = document.querySelector("header");
+const mainlogo = document.querySelector(".mainlogo")
+const sectionOne = document.querySelector(".ob");
+
+const sectionOneOptions = {
+  rootMargin: "-700px 0px 0px 0px"
+};
+
+const sectionOneObserver = new IntersectionObserver(function(
+  entries,
+  sectionOneObserver
+) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+      header.classList.add("nav-scrolled");
+      mainlogo.classList.add("imgfilter");
+    } else {
+      header.classList.remove("nav-scrolled");
+      mainlogo.classList.remove("imgfilter");
+    }
+  });
+},
+sectionOneOptions);
+
+sectionOneObserver.observe(sectionOne);
+
   auth = getAuth();
   onAuthStateChanged(auth, (user) => {
     if (user) {
