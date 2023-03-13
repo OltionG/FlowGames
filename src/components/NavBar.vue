@@ -6,9 +6,8 @@
       <li class="nav_list-item"><router-link class="nav_link" to="/" >Home</router-link></li>
       <li class="nav_list-item"><router-link class="nav_link" to="/about">About Us</router-link></li>
       <li class="nav_list-item"><router-link class="nav_link" to="/games">Games</router-link></li>
-      <li class="nav_list-item"><router-link class="nav_link" to="/games">Events</router-link></li>
       <li class="nav_list-item"><router-link class="nav_link" to="/games">News</router-link></li>
-      <li class="nav_list-item"><router-link class="nav_link" to="/games">Contact Us</router-link></li>
+      <li class="nav_list-item"><router-link class="nav_link" to="/contacts">Contact Us</router-link></li>
       <li class="nav_list-item"><router-link class="nav_link" to="/dashboard" v-if="isAdmin">Dashboard</router-link></li>
     </ul>
   </nav>
