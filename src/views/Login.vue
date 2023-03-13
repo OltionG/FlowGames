@@ -1,5 +1,5 @@
 <template>
-    <h1>Sign In</h1>
+    <h1 style="margin-top: 50px;">Sign In</h1>
     <p><input type="text" placeholder="Email" v-model="email"/></p>
     <p><input type="password" placeholder="Password" v-model="password"/></p>
     <p v-if="errMsg">{{ errMsg }}</p>
