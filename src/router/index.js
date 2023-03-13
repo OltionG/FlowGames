@@ -4,18 +4,18 @@ const router = createRouter({
     history: createWebHistory(),
     routes: [
         {
-    path: '/create',
-    name: 'create',
+    path: '/gamecreate',
+    name: 'gamecreate',
     component: () => import('../components/games/CreateComponent'),
   },
   {
-    path: '/view',
-    name: 'view',
+    path: '/gameview',
+    name: 'gameview',
     component: () => import('../components/games/ListComponent'),
   },
   {
-    path: '/edit/:id',
-    name: 'edit',
+    path: '/gameedit/:id',
+    name: 'gameedit',
     component: () => import('../components/games/EditComponent'),
   },
         { path: "/", component: () => import("../views/Home.vue")},

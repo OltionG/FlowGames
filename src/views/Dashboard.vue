@@ -12,10 +12,12 @@
         <router-view></router-view>
         </div>
     </div>
+    <Footer />
 </template>
 
 <script setup>
-import NavBar from "../components/NavBar.vue"
+import NavBar from "../components/NavBar.vue";
+import Footer from "../components/Footer.vue";
 import { collection, doc, setDoc, getFirestore } from "firebase/firestore";
 import { ref } from "vue";
 

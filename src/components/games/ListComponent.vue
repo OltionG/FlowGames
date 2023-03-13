@@ -19,7 +19,7 @@
               <td>{{ game.image }}</td>
               <td>
                 <router-link
-                  :to="{ name: 'edit', params: { id: game._id } }"
+                  :to="{ name: 'gameedit', params: { id: game._id } }"
                   class="btn btn-success"
                   >Edit
                 </router-link>

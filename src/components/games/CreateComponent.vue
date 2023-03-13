@@ -70,7 +70,7 @@
         axios
           .post(apiURL, this.game)
           .then(() => {
-            this.$router.push("/view");
+            this.$router.push("/gameview");
             this.game = {
               name: "",
               email: "",
