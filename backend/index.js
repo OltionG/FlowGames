@@ -25,10 +25,7 @@ app.use(cors())
 
 // API
 app.use('/api', gameAPI)
-app.use('/api', aboutAPI)
-app.use('/api', contactAPI)
-app.use('/api', columnnAPI)
-app.use('/api', newAPI)
+
 
 // Create port
 const port = process.env.PORT || 4000

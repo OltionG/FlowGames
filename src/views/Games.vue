@@ -21,17 +21,15 @@
           <thead class="thead-dark">
             <tr>
               <th>Name</th>
-              <th>Email</th>
-              <th>Phone</th>
-              <th>images</th>
+              <th>Description</th>
+              <th>Image</th>
               <th>Actions</th>
             </tr>
           </thead>
           <tbody>
             <tr v-for="game in games" :key="game._id">
               <td>{{ game.name }}</td>
-              <td>{{ game.email }}</td>
-              <td>{{ game.phone }}</td>
+              <td>{{ game.description }}</td>
               <td>{{ game.image }}</td>
               <td>
                 <router-link

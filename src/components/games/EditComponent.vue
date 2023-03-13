@@ -14,24 +14,15 @@
           </div>
   
           <div class="form-group">
-            <label>Email</label>
-            <input
-              type="email"
-              class="form-control"
-              v-model="game.email"
-              required
-            />
-          </div>
-  
-          <div class="form-group">
-            <label>Phone</label>
+            <label>Description</label>
             <input
               type="text"
               class="form-control"
-              v-model="game.phone"
+              v-model="game.description"
               required
             />
           </div>
+
           <div class="form-group">
             <label>Images</label>
             <input
